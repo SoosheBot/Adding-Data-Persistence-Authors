@@ -10,3 +10,13 @@
 
 5. Continue to build out your root folder, and (if you haven't) consider, and map the design of your tables for your migrations. dbDesigner is a decent system.
 
+## Adding Content
+
+1. If you haven't, modify your gitignore file to show all the things you want ignored. Use a previous project's data, if you need.
+
+2. Set your dotenv file's port, and then head to index.js to import and set your listening server business.
+
+3. Import dependencies into your server file and map out your routes.
+
+
+
