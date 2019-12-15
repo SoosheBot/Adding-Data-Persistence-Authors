@@ -14,7 +14,7 @@ function get() {
 };
 
 function getById(id) {
-    return db('projects')
+    return db('authors')
     .where({id})
     .first();
 };
