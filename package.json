@@ -1,7 +1,7 @@
 {
   "name": "adding-data-persistence-authors",
   "version": "1.0.0",
-  "description": "This is an adding data persistence joint.",
+  "description": "Adding Data Persistence",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -13,17 +13,17 @@
   },
   "keywords": [
     "node",
-    "databases",
-    "data",
-    "persistence",
-    "modeling",
-    "multi-table",
-    "queries",
-    "sqlite3",
     "express",
-    "relational"
+    "sqlite3",
+    "data",
+    "databases",
+    "persistence",
+    "multi-table",
+    "table-queries",
+    "relational",
+    "schema"
   ],
-  "author": "susheela bhat-harkins",
+  "author": "susheela bhat harkins",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/SoosheBot/Adding-Data-Persistence-Authors/issues"
@@ -36,6 +36,7 @@
     "helmet": "^3.21.2",
     "knex": "^0.20.4",
     "knex-cleaner": "^1.3.0",
+    "node": "^13.3.0",
     "nodemon": "^2.0.2",
     "sqlite3": "^4.1.1"
   }

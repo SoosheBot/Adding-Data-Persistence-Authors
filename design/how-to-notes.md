@@ -23,6 +23,8 @@
 
 5. Add a dbConfig file in your data folder and add content to export all your knex-es. Then you can run your migrations with `knex migrate:latest` and `knex seed:run`. Note--Any time you run a migrate:latest, you need to rerun your seeds.
 
+6. Build your helper files, and then your route files with CRUD operations. Use Insomnia to test endpoints.
+
 
 
 
