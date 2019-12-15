@@ -16,7 +16,11 @@
 
 2. Set your dotenv file's port, and then head to index.js to import and set your listening server business.
 
-3. Import dependencies into your server file and map out your routes.
+3. Import dependencies into your server file and map out your routes. Add all the content to make a working server and don't forget the module.exports in the end to export it to the index file correctly.
+
+4. Time to work on your migrations! Run `knex migrate:make [name of your migration file]` to build your data folder with your migrations. You can do `knex seed:make 00-[seed name]` to make seeds.
+
+5. Add a dbConfig file in your data folder and add content to export all your knex-es.
 
 
 
