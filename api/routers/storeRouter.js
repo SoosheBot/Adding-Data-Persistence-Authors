@@ -5,8 +5,16 @@ const Store = require('../helpers/storeModel');
 router.get('/', (req, res) => {
     Store.get()
       .then(stores => {
+        const convert = stores.map(converts => {
+            if(converts.book_sold == 0){
+              converts.book_sold = false
+            } else {
+              converts.book_sold = true
+            }
+        })
+        console.log(convert)
         res.status(200).json(stores);
-      })
+    })
       .catch(err => {
         res.json(500).json({ error: 'Could not retrieve stores.' });
       });
