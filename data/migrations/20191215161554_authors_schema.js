@@ -5,7 +5,7 @@ exports.up = function(knex) {
       tbl.text("name", 255).notNullable();
     })
     .createTable("books", tbl => {
-      tbl.increments("book_id");
+      tbl.increments("id");
       tbl
         .integer("author_id")
         .unsigned()
@@ -18,7 +18,7 @@ exports.up = function(knex) {
       tbl.text("book_genre", 255);
     })
     .createTable("stores", tbl => {
-      tbl.increments("store_id");
+      tbl.increments("id");
       tbl.text("store_name", 255).notNullable();
       tbl
         .integer("author")
@@ -32,7 +32,7 @@ exports.up = function(knex) {
         .integer("book")
         .unsigned()
         .notNullable()
-        .references("book_id")
+        .references("id")
         .inTable("books")
         .onDelete("CASCADE")
         .onUpdate("CASCADE");
