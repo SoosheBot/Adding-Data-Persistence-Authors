@@ -21,7 +21,7 @@
 4. Time to work on your migrations! Run `knex migrate:make [name of your migration file]` to build your data folder with your migrations. You can do `knex seed:make 00-[seed name]` to make seeds.
     4a. Build your tables in migrations, and from them you can also build seeds.
 
-5. Add a dbConfig file in your data folder and add content to export all your knex-es. Then you can run your migrations with `knex migrate:latest` and `knex seed:run`. Note--Any time you run a migrate:latest, you need to rerun your seeds.
+5. Add a dbConfig file in your data folder and add content to export all your knex-es. Then you can run your migrations with `knex migrate:latest` and `knex seed:run`. Note--Any time you run a migrate:latest, you need to rerun your seeds. You can also run it to reset your Insomnia file, if you like.
 
 6. Build your helper files, and then your route files with CRUD operations. Use Insomnia to test endpoints.
 
