@@ -69,7 +69,7 @@ router.delete('/:id', (req, res) => {
       }
     })
     .catch(err => {
-      res.status(500).json({ error: 'Failed to delete author at this ID' });
+      res.status(500).json({ error: 'Failed to delete book at this ID' });
     });
 });
 
