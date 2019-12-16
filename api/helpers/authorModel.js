@@ -24,8 +24,9 @@ function getBooks(id) {
     .select(
         'a.id as author id',
         'a.name as author name',
-        'b.title as title',
-        'b.genre as genre'
+        'b.book_title as title',
+        'b.book_genre as genre',
+        'b.id as book id'
     )
     .join('books as b', 'a.id', '=', 'b.author_id')
     .where('a.id', id);

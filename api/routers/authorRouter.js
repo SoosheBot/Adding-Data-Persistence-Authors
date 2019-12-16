@@ -25,7 +25,20 @@ router.get("/:id", (req, res) => {
     });
 });
 
-router.get("/:id/books", (req, res) => {});
+router.get("/:id/books", (req, res) => {
+  const {id} = req.params;
+  Author.getBooks(id)
+  .then(bookId => {
+    if (bookId) {
+      res.status(200).json(bookId);
+    } else {
+      res.status(404).json({error: 'This author does not have any books.'})
+    }
+  })
+  .catch(err => {
+    res.status(500).json({error: 'Could not retrieve books by this author.'})
+  })  
+});
 
 router.post("/", (req, res) => {
   const newAuthor = req.body;

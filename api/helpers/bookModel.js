@@ -3,8 +3,6 @@ const db = require("../../data/dbConfig");
 module.exports = {
   get,
   getById,
-  getByAuthorId,
-  getByStoreId,
   add,
   update,
   remove
@@ -20,13 +18,9 @@ function getById(id) {
   .first();
 };
 
-function getByAuthorId() {
-
+function add(book) {
+  return db('books').insert(book);
 };
-
-function getByStoreId() {};
-
-function add() {};
 
 function update() {};
 
