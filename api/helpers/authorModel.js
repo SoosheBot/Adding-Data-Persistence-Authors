@@ -3,7 +3,7 @@ const db = require('../../data/dbConfig');
 module.exports = {
   get,
   getById,
-  getAllInfo,
+  getBooks,
   add,
   update,
   remove
@@ -19,22 +19,17 @@ function getById(id) {
     .first();
 };
 
-function getAllInfo(id) {
+function getBooks(id) {
     return db('authors as a')
     .select(
         'a.id as author id',
         'a.name as author name',
         'b.title as title',
-        'b.genre as genre',
-        's.store_id as store id',
-        's.store_name as store name',
-        's.book_sold as book sold'
+        'b.genre as genre'
     )
     .join('books as b', 'a.id', '=', 'b.author_id')
-    .join('stores as s', 'a.id', '=', 's.author')
     .where('a.id', id);
 };
-
 
 
 function add(author) {
